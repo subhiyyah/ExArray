@@ -72,6 +72,26 @@ public class Main {
 //        }
 //        System.out.println("the max number is  "+max);
 
+        //ex3 //
+//        System.out.println("enter the size of array");
+//        int size3 = input.nextInt();
+//        int num3;
+//        int large;
+//        ArrayList<Integer> lrager = new ArrayList<>();
+//        for (int i = 0; i < size3; i++) {
+//            System.out.println("enter the element number  " + (i + 1));
+//            num3 = input.nextInt();
+//            lrager.add(num3);
+//
+//        }
+//        if (lrager.getFirst() > lrager.getLast()){
+//            System.out.println("the larger vale is "+lrager.getFirst() );
+//
+//
+//    } else if (lrager.getFirst() < lrager.getLast()) {
+//            System.out.println("the larger vale is "+lrager.getLast() );
+//        }
+
         //ex 4
         //write a java program to swap the first and last element of an array and create a new array
 //        System.out.println("enter the size of array");
@@ -92,6 +112,24 @@ public class Main {
 //
 //        }
 //        System.out.println(swap);
+
+
+        //ex4
+//        System.out.println("enter the size of array");
+//        int size3 = input.nextInt();
+//        int num3;
+//        int temp;
+//        ArrayList<Integer> orginal = new ArrayList<>();
+//        for (int i = 0; i < size3; i++) {
+//            System.out.println("enter the element number  " + (i + 1));
+//            num3 = input.nextInt();
+//            orginal.add(num3);
+//        }
+//        System.out.println("المصفوفة بدون تعديل"+orginal);
+//        temp=orginal.getFirst();//حفظت القيمة البدائية
+//        orginal.set(0, orginal.getLast());//القيمة النهائية داخل البداية
+//        orginal.set(orginal.size()-1,temp );//اخر عنصر مكان اول عنصر
+//        System.out.println("المصفوفة بعد التعديل"+ orginal);
 
         //ex5
         //write a program that places the odd element of an array before the even element
@@ -126,5 +164,39 @@ public class Main {
 //        System.out.println("Array after putting odd number first  "+oddFirst);
         //ex6
         //write a program that test the equality of two arrays
+        System.out.println("enter the size of array 1 and two");
+        int siz6=input.nextInt();
+        ArrayList<Integer> arra1=new ArrayList<>();
+        ArrayList<Integer> arra2=new ArrayList<>();
+        int val6;
+        //تعبئة كل المصفوفتين
+        for(int i =0;i<siz6;i++){
+            System.out.println("enter the number in arra1 item  "+(i+1));
+            val6=input.nextInt();
+            arra1.add(i,val6);
+        }
+        for(int j =0;j<siz6;j++){
+
+            System.out.println("enter the number in arra2 item  "+(j+1));
+            val6=input.nextInt();
+            arra2.add(j,val6);
+        }
+        int equal=0;
+        for(int k = 0 ;k<siz6;k++){
+            if(arra1.get(k)==arra2.get(k)){
+                equal++;
+
+            }
+        }
+        if(equal==siz6){
+            System.out.println("this array are equal");
+
+        }else
+            System.out.println("this array are not equal"+"\n the score of equality is "+equal);
+
+
+        System.out.println(arra1);
+        System.out.println(arra2);
+
     }
 }
